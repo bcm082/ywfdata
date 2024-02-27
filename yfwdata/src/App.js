@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import ProductsList from './ProductsList';
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
       </header>
       <main className="p-8">
         <p>Welcome to your product management app!</p>
+        <ProductsList />
       </main>
     </div>
   );

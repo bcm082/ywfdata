@@ -7,7 +7,7 @@
 
 const express = require('express');
 const app = express();
-const port = 3000; // Choose a port number
+const port = 3001; // Choose a port number
 const Product = require('./productModel');
 const User = require('./userModel');
 require('dotenv').config();
