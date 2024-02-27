@@ -19,7 +19,6 @@ router.post('/users/register', async (req, res) => {
   }
 });
 
-
 const jwt = require('jsonwebtoken');
 
 router.post('/users/login', async (req, res) => {
