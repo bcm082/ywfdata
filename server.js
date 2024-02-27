@@ -9,14 +9,18 @@ const express = require('express');
 const app = express();
 const port = 3000; // Choose a port number
 const Product = require('./productModel');
+const User = require('./userModel');
+require('dotenv').config();
 require('./db'); // Database connection
 
 app.use(express.json());
 
 // Import the product routes
 const productRoutes = require('./productRoutes');
-// Use the product routes with '/products' as the base path
 app.use('/', productRoutes);
+
+const userRoutes = require('./userRoutes');
+app.use('/', userRoutes);
 
 app.get('/',(req, res) => {
     res.send('Express Server Test');
