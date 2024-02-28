@@ -1,21 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LandingPage from './components/LandingPage'; // Ensure the path is correct
 import ProductsList from './ProductsList';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="bg-blue-500 text-white p-6">
-        <h1 className="text-3xl">YFW Data App</h1>
-      </header>
-      <main className="p-8">
-        <p>Welcome to your product management app!</p>
-        <ProductsList />
-      </main>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/products" element={<ProductsList />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
 
